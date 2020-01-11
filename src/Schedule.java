@@ -17,11 +17,11 @@ import java.awt.event.*;
     time
  */
 import javax.swing.*;
-
+import java.awt.*;
 
 public class Schedule extends JFrame {
     static JFrame window;
-    
+    static JPanel panel;
 
     public static void main(String[] args){
         System.out.println("Schedule");
@@ -31,6 +31,7 @@ public class Schedule extends JFrame {
     Schedule() {
         super("CSO");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setSize(Toolkit.getDefaultToolkit().getScreenSize());
 
     }
 }

@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="624f6cf2-92c4-4fbc-a639-8d8379b1d6b1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/cso/Course.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cso/Schedule.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cso/Schedule.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Schedule.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
