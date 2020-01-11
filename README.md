@@ -1,1 +1,1 @@
-# lifetracker
+# Carleton Schedule Optimizer
