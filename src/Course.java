@@ -1,3 +1,6 @@
 public class Course {
-    String name, professor, subject, slot;
+    String name, section, time;
+    int[] slots;
+
+
 }

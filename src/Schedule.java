@@ -15,7 +15,7 @@ import javax.swing.*;
 
 public class Schedule extends JFrame {
     static JFrame window;
-    
+
 
     public static void main(String[] args){
         System.out.println("Schedule");
