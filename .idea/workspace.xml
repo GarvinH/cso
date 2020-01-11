@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="624f6cf2-92c4-4fbc-a639-8d8379b1d6b1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Schedule.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,6 +67,14 @@
       <option name="presentableId" value="Default" />
       <updated>1578776213712</updated>
     </task>
+    <task id="LOCAL-00001" summary="imported java.awt.&#10;created jpanel">
+      <created>1578781155133</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578781155133</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -83,6 +92,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created interface class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created interface class" />
+    <MESSAGE value="imported java.awt.&#10;created jpanel" />
+    <option name="LAST_COMMIT_MESSAGE" value="imported java.awt.&#10;created jpanel" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="23" width="733" height="777" key="CommitChangelistDialog2" timestamp="1578781154940">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="0" y="23" width="733" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1578781154940" />
   </component>
 </project>
