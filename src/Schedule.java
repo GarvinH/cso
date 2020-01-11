@@ -10,6 +10,12 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.event.*;
 //javax.swing
+/*  Prof name
+    Room number
+    Course number
+    building name/abbreviation
+    time
+ */
 import javax.swing.*;
 
 
@@ -25,5 +31,6 @@ public class Schedule extends JFrame {
     Schedule() {
         super("CSO");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
     }
 }
