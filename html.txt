@@ -1,0 +1,654 @@
+<html class="no-js" dir="ltr" lang="en-US">
+ <!--<![endif]-->
+ <!-- the "no-js" class is for Modernizr. -->
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   Course Search - Carleton University
+  </title>
+  <link href="/css/ro/ro_course_search.css" media="screen" rel="stylesheet" type="text/css"/>
+  <!--[if lt IE 9]>
+<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+ </head>
+ <body>
+  <header class="centered">
+   <div class="culogo">
+    <h2>
+     Registrar's Office
+    </h2>
+   </div>
+   <!-- end culogo -->
+   <div class="clear">
+   </div>
+  </header>
+  <div class="banner">
+   <h1>
+    Course Details
+   </h1>
+   <div class="buttonsarea">
+    <ul>
+     <li class="redbutton">
+      <a href="http://www1.carleton.ca/registrar/registration/carleton-central-how-to-videos/" target="_blank">
+       How-To Video
+      </a>
+     </li>
+     <li class="redbutton">
+      <a href="http://www1.carleton.ca/registrar/registration/registration-steps/" target="_blank">
+       User Guide
+      </a>
+     </li>
+     <li class="redbutton">
+      <a href="http://calendar.carleton.ca/undergrad/" target="_blank">
+       Undergrad Calendar
+      </a>
+     </li>
+     <li class="redbutton">
+      <a href="http://calendar.carleton.ca/grad/" target="_blank">
+       Graduate Calendar
+      </a>
+     </li>
+    </ul>
+   </div>
+   <div class="clear">
+   </div>
+  </div>
+  <div class="bannerwrap">
+  </div>
+  <section class="containerfull centered">
+   <section class="contentareafull">
+    <table border="0" cellpadding="4" cellspacing="0" style="font-size:12px;" width="95%">
+     <tbody>
+      <tr>
+       <td colspan="2">
+        <br/>
+        <br/>
+        <br/>
+       </td>
+      </tr>
+      <tr>
+       <td width="20%">
+        <b>
+         Registration Term:
+        </b>
+       </td>
+       <td>
+        Winter 2020 (January-April)
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <b>
+         CRN:
+        </b>
+       </td>
+       <td>
+        11047
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <b>
+         Subject:
+        </b>
+       </td>
+       <td>
+        COMP 2401 B
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <b>
+         Long Title:
+        </b>
+       </td>
+       <td>
+        Introduction to Systems Programming
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <b>
+         Title:
+        </b>
+       </td>
+       <td>
+        Intro to Systems Programming
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <b>
+         Course Description:
+        </b>
+       </td>
+       <td>
+        Introduction to system-level programming with fundamental OS concepts, procedures, primitive data types, user-defined types. Topics may include process management, memory management, process coordination and synchronization, inter-process communication, file systems, networking, pointers, heap and stack memory management, and system/library calls.
+        <br/>
+        Precludes additional credit for COMP 1002 (no longer offered), COMP 1402 (no longer offered), COMP 2001 (no longer offered), SYSC 2006.
+        <br/>
+        Prerequisite(s): one of COMP 1406, COMP 1006 or SYSC 2004, with a minimum grade of C-.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <b>
+         Course Credit Value:
+        </b>
+       </td>
+       <td>
+        .5
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <b>
+         Schedule Type:
+        </b>
+       </td>
+       <td>
+        Lecture
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <b>
+         Full Session Info:
+        </b>
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <b>
+         <a href="http://www1.carleton.ca/registrar/registration/registration-steps/build-your-schedule/legend" target="_blank">
+          <u>
+           <font color="blue">
+            Status:
+           </font>
+          </u>
+         </a>
+        </b>
+       </td>
+       <td>
+        <font color="red">
+         Waitlist Closed
+        </font>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <b>
+         Section Information:
+        </b>
+       </td>
+       <td>
+        Must have prerequisite with required grade of C-
+        <br/>
+        or above to remain in course.
+        <br/>
+        Precludes additional credit for COMP 1002 (no longer
+        <br/>
+        offered), COMP 1402 (no longer offered), COMP 2001
+        <br/>
+        (no longer offered), SYSC 2006.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <b>
+         <a href="http://www1.carleton.ca/registrar/registration/registration-steps/build-your-schedule/legend" target="_blank">
+          <u>
+           <font color="blue">
+            Year in Program:
+           </font>
+          </u>
+         </a>
+        </b>
+       </td>
+       <td>
+        {None}
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <b>
+         <a href="http://www1.carleton.ca/registrar/registration/registration-steps/build-your-schedule/legend" target="_blank">
+          <u>
+           <font color="blue">
+            Level Restriction:
+           </font>
+          </u>
+         </a>
+        </b>
+       </td>
+       <td>
+        {None}
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <b>
+         <a href="http://www1.carleton.ca/registrar/registration/registration-steps/build-your-schedule/legend" target="_blank">
+          <u>
+           <font color="blue">
+            Degree Restriction:
+           </font>
+          </u>
+         </a>
+        </b>
+       </td>
+       <td>
+        {None}
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <b>
+         <a href="http://www1.carleton.ca/registrar/registration/registration-steps/build-your-schedule/legend" target="_blank">
+          <u>
+           <font color="blue">
+            Major Restriction:
+           </font>
+          </u>
+         </a>
+        </b>
+       </td>
+       <td>
+        {None}
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <b>
+         <a href="http://www1.carleton.ca/registrar/registration/registration-steps/build-your-schedule/legend" target="_blank">
+          <u>
+           <font color="blue">
+            Program Restrictions:
+           </font>
+          </u>
+         </a>
+        </b>
+       </td>
+       <td>
+        Cog Sci:Cognition &amp; Comp (Include)
+       </td>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+        CS: Managem't &amp; Business Sys (Include)
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+        Computer Game Development (Include)
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+        Biomedical Computing (Include)
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+        Mobile Computing (Include)
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+        Robotics (Include)
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+        Algorithms (Include)
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+        CS: Software Engineering (Include)
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+        Psychology (Include)
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+        CS: Network Computing (Include)
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+        CS: Comp. &amp; Internet Security (Include)
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+        Computer Science (Include)
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+        Computer Science (Include)
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+        B. Econ: Conc Comp Analysis (Include)
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+        B.Econ:Comp Anal/Financial Eco (Include)
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+        Biochemistry (Include)
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+        Computer Mathematics (Include)
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+        CS&amp;M: Conc Stats&amp;Computing (Include)
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+        CS&amp;M:Conc Comp Theory&amp;Num Meth (Include)
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+        Computat'l &amp; Appl Math &amp; Stats (Include)
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+        CompAppMathStats:Conc App Ana (Include)
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+        CompAppMathStats:Conc Disc Mat (Include)
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+        CompAppMathStats:ConcApStatPro (Include)
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+        Bioinformatics (Include)
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+        Biochemistry (Include)
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+        Applied Physics (Include)
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+        Computational Biochemistry (Include)
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+       <td>
+        <b>
+         <a href="http://www1.carleton.ca/registrar/registration/registration-steps/build-your-schedule/legend" target="_blank">
+          <u>
+           <font color="blue">
+            Department Restriction:
+           </font>
+          </u>
+         </a>
+        </b>
+       </td>
+       <td>
+        {None}
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <b>
+         <a href="http://www1.carleton.ca/registrar/registration/registration-steps/build-your-schedule/legend" target="_blank">
+          <u>
+           <font color="blue">
+            Faculty Restriction:
+           </font>
+          </u>
+         </a>
+        </b>
+       </td>
+       <td>
+        {None}
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+       <td colspan="2">
+        <br/>
+        <table border="0" cellpadding="4" cellspacing="0" style="font-size:12px;" width="95%">
+         <tbody>
+          <tr>
+           <td>
+            <b>
+             Meeting Date
+            </b>
+           </td>
+           <td>
+            <b>
+             Days
+            </b>
+           </td>
+           <td>
+            <b>
+             Time
+            </b>
+           </td>
+           <td>
+            <b>
+             Building
+            </b>
+           </td>
+           <td>
+            <b>
+             Room
+            </b>
+           </td>
+           <td>
+            <b>
+             Schedule
+            </b>
+           </td>
+           <td>
+            <b>
+             Instructor
+            </b>
+           </td>
+          </tr>
+          <tr>
+           <td class="default">
+            Jan 06, 2020 to Apr 07, 2020
+           </td>
+           <td>
+            Wed Fri
+           </td>
+           <td>
+            14:35 - 15:55
+           </td>
+           <td>
+            Azrieli Theatre
+           </td>
+           <td>
+            301
+           </td>
+           <td>
+            Lecture
+           </td>
+           <td>
+            Mark Lanthier (Primary)
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <td colspan="2">
+        <br/>
+        <br/>
+        <br/>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </section>
+   <div class="clear">
+   </div>
+  </section>
+  <div class="footerwrapfull">
+  </div>
+  <footer>
+   <div class="footerleft">
+    <p>
+     <a href="#">
+      Registrar's Office
+     </a>
+     |  Tel: 613-520-3500  |  Fax: 613-520-4410
+     <br/>
+     300 Tory Building, 1125 Colonel By Drive, Ottawa, ON, Canada, K1S 5B6
+    </p>
+   </div>
+   <div class="footerright">
+    <p>
+     <br/>
+     © 2012
+     <a href="#">
+      Carleton University
+     </a>
+    </p>
+   </div>
+   <div class="clear">
+   </div>
+  </footer>
+ </body>
+</html>
