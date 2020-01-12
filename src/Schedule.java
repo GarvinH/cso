@@ -79,8 +79,14 @@ public class Schedule extends JFrame {
         JLabel selectionDescription;
         JList levelList;
 
+        private int maxX, maxY;
+
         AddPanel() {
             setLayout(null);
+
+            maxX = Toolkit.getDefaultToolkit().getScreenSize().width;
+            maxY = Toolkit.getDefaultToolkit().getScreenSize().height;
+
             // add a filein function next version to make semesters automatically updated
             String[] semesterString = {"Winter 2020", "Summer 2020"};
             String[] courseLevelStrings = {"Undergraduate", "Graduate"};
@@ -127,6 +133,9 @@ public class Schedule extends JFrame {
             add(courseLevelOptions);
             add(semesterOptions);
             add(courseOptions);
+
+
+
         }
 
         private class UIPanel extends JPanel {
@@ -137,9 +146,6 @@ public class Schedule extends JFrame {
 
         }
 
-        private class SchedulePanel extends JPanel {
-
-        }
         public void paintComponent(Graphics g) {
             super.paintComponent(g);
             this.setDoubleBuffered(true);
@@ -149,6 +155,10 @@ public class Schedule extends JFrame {
             g.drawString("Course Level:", 10 ,115 );
             g.drawString("Subject", 10, 210);
             g.drawString("Course Number", 10, 300);
+
+            //draw calendar
+            g.setColor(Color.gray);
+            g.fillRect(maxX/2, 100, maxX-50, maxY-50);
         }
 
 
