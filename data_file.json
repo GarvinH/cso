@@ -1,0 +1,32 @@
+{
+  "COMP 2401 B": {
+    "registration_term": "Winter 2020 (January-April)",
+    "crn": "11047",
+    "subject": "COMP 2401 B",
+    "long_title": "Introduction to Systems Programming",
+    "title": "Intro to Systems Programming",
+    "stype": "Lecture",
+    "status": "Waitlist Closed",
+    "meeting_date": "Jan 06, 2020 to Apr 07, 2020",
+    "days": "Wed Fri",
+    "time": "14:35 - 15:55",
+    "building": "Azrieli Theatre",
+    "room": "301",
+    "instructor": "Mark Lanthier (Primary)"
+  },
+  "COMP 1006 B": {
+    "registration_term": "Winter 2020 (January-April)",
+    "crn": "11012",
+    "subject": "COMP 1006 B",
+    "long_title": "Introduction to Computer Science II",
+    "title": "Introdu to Computer Science II",
+    "stype": "Lecture",
+    "status": "Open",
+    "meeting_date": "Jan 06, 2020 to Apr 07, 2020",
+    "days": "Tue Thu",
+    "time": "16:35 - 17:55",
+    "building": "Loeb Building",
+    "room": "C164",
+    "instructor": "LD Nel (Primary)"
+  }
+}
