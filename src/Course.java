@@ -1,6 +1,52 @@
-public class Course {
-    String name, section, time;
-    int[] slots;
+/* [Course.java]
+ * Details of all courses are stored in this class
+ * Albert Quon
+ * 2020/01/11
+ */
+
+import java.util.ArrayList;
+
+class Course {
+    private String name, type, time, days;
+    private int[] slots;
+    private ArrayList<Course> tutorials;
+
+    Course(String name, String type, String time, String days){
+        this.name = name;
+        this.type = type;
+        this.time = time;
+        this.days = days;
+        this.tutorials = new ArrayList<>();
+    }
 
 
+
+    public String getName() {
+        return name;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+
+    public int[] getSlots() {
+        return slots;
+    }
+
+    public void setSlots(int[] slots) {
+        this.slots = slots;
+    }
+
+    public ArrayList<Course> getTutorials(){
+        return tutorials;
+    }
+
+    public String getDays(){
+        return this.days;
+    }
 }
