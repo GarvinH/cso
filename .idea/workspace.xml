@@ -74,7 +74,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578781155133</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Created arraylist for courses&#10;created JPanels for UI and the calendar">
+      <created>1578782545583</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1578782545583</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -93,12 +100,13 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created interface class" />
     <MESSAGE value="imported java.awt.&#10;created jpanel" />
-    <option name="LAST_COMMIT_MESSAGE" value="imported java.awt.&#10;created jpanel" />
+    <MESSAGE value="Created arraylist for courses&#10;created JPanels for UI and the calendar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created arraylist for courses&#10;created JPanels for UI and the calendar" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="23" width="733" height="777" key="CommitChangelistDialog2" timestamp="1578781154940">
+    <state x="0" y="23" width="733" height="777" key="CommitChangelistDialog2" timestamp="1578782545439">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="0" y="23" width="733" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1578781154940" />
+    <state x="0" y="23" width="733" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1578782545439" />
   </component>
 </project>

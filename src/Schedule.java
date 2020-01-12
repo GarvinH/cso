@@ -27,25 +27,13 @@ public class Schedule extends JFrame {
     static JFrame window;
     static JPanel ioPanel;
     static JPanel schPanel;
+    static JButton courseLockInButton;
+    static JLabel selectionDescription;
 
     public static void main(String[] args){
         System.out.println("Schedule");
         window = new Schedule();
-        //create an array list of type string
-        ArrayList<String> courses = new ArrayList<String>();
 
-        // add array list elements
-        courses.add("COMP 1405");
-        courses.add("COMP 1406");
-        courses.add("COMP 1805");
-        courses.add("COMP 2804");
-        courses.add("MATH 1007");
-        courses.add("MATH 2007");
-        courses.add("MATH 1104");
-        courses.add("STAT 2507");
-        courses.add("ECON 1001");
-        courses.add("ECON 1002");
-        courses.add("STAT 2509");
     }
 
     Schedule() {
