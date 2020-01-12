@@ -1,3 +1,4 @@
+
 /* [Schedule.java]
  * The main class for the optimizer, also the frame for UI
  * Albert Quon, Kelvin Du, Garvin Hui, Gordon Tang
@@ -20,6 +21,7 @@ import javax.print.attribute.AttributeSet;
  */
 // graphic import
 import javax.swing.*;
+import javax.swing.text.AbstractDocument;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.DocumentFilter;
 import javax.swing.text.PlainDocument;
@@ -62,29 +64,22 @@ public class Schedule extends JFrame {
     }
 
     private class AddPanel extends JPanel {
-        JComboBox courseSubject;
-        JComboBox courseLevel;
         JTextField courseNumber;
         JComboBox semesterOptions;
         JComboBox courseLevelOptions;
         JComboBox courseOptions;
-        JTextField CRN;
         JButton addCourse;
         JButton clearButton;
 
         JScrollPane levelScrollPane;
-        JScrollPane subjectScrollPane;
-        JPanel schPanel;
-        JButton courseLockInButton;
-        JLabel selectionDescription;
         JList levelList;
 
         AddPanel() {
             setLayout(null);
             // add a filein function next version to make semesters automatically updated
-            String[] semesterString = {"Winter 2020", "Summer 2020"};
-            String[] courseLevelStrings = {"Undergraduate", "Graduate"};
-            String[] courseString = {"ACCT", "AERO", "AFRI", "ASLA", "ANTH", "ALDS", "COMP", "MATH"};
+            String[] semesterString = { "Winter 2020", "Summer 2020" };
+            String[] courseLevelStrings = { "Undergraduate", "Graduate" };
+            String[] courseString = { "ACCT", "AERO", "AFRI", "ASLA", "ANTH", "ALDS", "COMP", "MATH" };
 
             // drop down strings
             courseLevelOptions = new JComboBox(courseLevelStrings);
@@ -92,14 +87,14 @@ public class Schedule extends JFrame {
             courseOptions = new JComboBox(courseString);
 
             // buttons
-            addCourse = new JButton("Add Course");//this button adds course
-            clearButton = new JButton("Clear");//this button clears the calendar
+            addCourse = new JButton("Add Course");// this button adds course
+            clearButton = new JButton("Clear");// this button clears the calendar
 
             // user input
             courseNumber = new JTextField();
-            //courseNumber.setDocument(new JTextFieldLimit(4));
+            courseNumber.setDocument(new JTextFieldLimit(4));
 
-            semesterOptions.setBounds(10,40,120,25);
+            semesterOptions.setBounds(10, 40, 120, 25);
             courseLevelOptions.setBounds(10, 130, 120, 25);
             courseOptions.setBounds(10, 225, 120, 25);
             courseNumber.setBounds(10, 315, 120, 25);
@@ -116,17 +111,18 @@ public class Schedule extends JFrame {
                 public void mousePressed(MouseEvent e) {
                     super.mousePressed(e);
                     if (!levelList.isSelectionEmpty()) {
-                        levelList.clearSelection();//allows only 1 level to be selected at a given time
+                        levelList.clearSelection();// allows only 1 level to be selected at a given time
                     }
                 }
             });
             levelList.setFont(new Font("monospaced", Font.PLAIN, 12));
-            levelScrollPane.setViewportView(levelList);//setting scrollpane to display list
+            levelScrollPane.setViewportView(levelList);// setting scrollpane to display list
             levelScrollPane.setBounds(10, 30, 600, 130);
 
             add(courseLevelOptions);
             add(semesterOptions);
             add(courseOptions);
+            add(addCourse);
         }
 
         private class UIPanel extends JPanel {
@@ -140,31 +136,33 @@ public class Schedule extends JFrame {
         private class SchedulePanel extends JPanel {
 
         }
+
         public void paintComponent(Graphics g) {
             super.paintComponent(g);
             this.setDoubleBuffered(true);
             repaint();
             g.setFont(new Font("Arial", Font.BOLD, 16));
             g.drawString("Semester:", 10, 25);
-            g.drawString("Course Level:", 10 ,115 );
+            g.drawString("Course Level:", 10, 115);
             g.drawString("Subject", 10, 210);
             g.drawString("Course Number", 10, 300);
         }
 
-
     }
 
-    private class JTextFieldLimit extends DocumentFilter {
+    private class JTextFieldLimit extends PlainDocument {
         private int limit;
+
         JTextFieldLimit(int limit) {
             super();
             this.limit = limit;
         }
 
-        public void insertString(DocumentFilter.FilterBypass fb, int offset, String string, AttributeSet attr) throws BadLocationException {
-            if (isNum(string)) {
-                if (fb.getDocument().getLength()+string.length()<=limit) {
-                    fb.insertString(offset, string, attr);
+        @Override
+        public void insertString(int offs, String str, javax.swing.text.AttributeSet a) throws BadLocationException {
+            if (isNum(str)) {
+                if (getLength() + str.length() <= limit) {
+                    super.insertString(offs, str, a);
                 }
             }
         }
@@ -174,7 +172,7 @@ public class Schedule extends JFrame {
         try {
             Integer.parseInt(str);
             return true;
-        } catch(NumberFormatException e) {
+        } catch (NumberFormatException e) {
             return false;
         }
     }
