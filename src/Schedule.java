@@ -1,6 +1,6 @@
 /* [Schedule.java]
  * The main class for the optimizer, also the frame for UI
- * Albert Quon, Kelvin Du, Garvin Hui, Gordon
+ * Albert Quon, Kelvin Du, Garvin Hui, Gordon Tang
  * 2020/01/11
  */
 //imports
@@ -22,6 +22,7 @@ public class Schedule extends JFrame {
     Course[][] timeFrames = new Course[5][26];
 
     ArrayList<Course> courses = new ArrayList<>(); // stores all courses
+    ArrayList<Course[][]> timeTables = new ArrayList<>(); // stores all timetables
 
 
     public static void main(String[] args){ window = new Schedule(); }
@@ -31,33 +32,31 @@ public class Schedule extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         readFile("src\\temp.json");
 
-        for(int i = 0; i < 5; i++) {
-            for (int j = 0; j < 26; j++) {
-                timeFrames[i][j] = null;
-            }
-        }
         ArrayList<Course> userChoices = assignCourses();
         ArrayList<ArrayList<Course>> available = organizeCourses(userChoices);
 
-        createTimetable(available);
-        for (int i = 0; i < timeFrames[0].length; i++) {
-            for (int j = 0; j < timeFrames.length; j++) {
-                if (timeFrames[j][i] != null) {
-                    System.out.print(" " + timeFrames[j][i].getName() + " ");
-                } else {
-                    System.out.print(timeFrames[j][i]);
+
+        Course[][] timeTable = new Course[5][26];
+        createTimetable(available, timeTable, 0, 0, 0, new ArrayList<>());
+        System.out.println(timeTables);
+        for (int i = 0; i < timeTables.size(); i++) {
+            for (int j = 0; j < timeTable[0].length; j++) {
+                for (int k = 0; k < timeTable.length; k++) {
+                    if (timeTables.get(i)[k][j] != null) {
+                        System.out.print(" " + timeTables.get(i)[k][j].getName() + " ");
+                    } else {
+                        System.out.print(" " + timeTables.get(i)[k][j] + " ");
+                    }
                 }
+                System.out.println();
             }
-            System.out.println();
         }
+
     }
 
     void readFile(String fileName){
-        //Object obj = null;
         try {
-            //FileReader file = new FileReader(fileName);
             String contents = new String((Files.readAllBytes(Paths.get(fileName))));
-            //obj = new JSONParser().parse(file);
             JSONObject jsonObject = new JSONObject(contents);
 
             Iterator keys = jsonObject.keys();
@@ -92,7 +91,7 @@ public class Schedule extends JFrame {
             validName = false;
             if (courseName.equalsIgnoreCase("none")){
                 if (numCourses < 5) {
-                    System.out.println("enter more courses");
+                    System.out.println("Enter at least " + Integer.toString(5-numCourses) + " courses");
                 } else {
                     complete = true;
                 }
@@ -159,30 +158,107 @@ public class Schedule extends JFrame {
         return uniqueCourses;
     }
 
-    void createTimetable(ArrayList<ArrayList<Course>> available){
+    void createTimetable(ArrayList<ArrayList<Course>> available, Course[][] timeTable, int startA, int startB, int startC, ArrayList<Course> current){
 
-        int j;
+/*        int j;
         boolean added;
         for (int i = 0; i < available.size(); i++) {
             j =0;
             added = false;
             while(j < available.get(i).size() && !added) {
-                added = addCourse(available.get(i).get(j));
+                added = addCourse(available.get(i).get(j), timeTable);
                 if (added && available.get(i).get(j).getTutorials().size() > 0){
                     int k = 0;
                     added = false;
                     while(k < available.get(i).get(j).getTutorials().size() && !added){
-                        added = addCourse(available.get(i).get(j).getTutorials().get(k));
+                        added = addCourse(available.get(i).get(j).getTutorials().get(k), timeTable);
                         k++;
                     }
                 }
                 j++;
             }
 
+        }*/
+        Course[][] timeTableCopy = createCopy(timeTable);
+        ArrayList<Course> copy = (ArrayList<Course>)current.clone();
+
+
+
+        for (int i = startA; i < available.size(); i++) {
+            for (int j = startB; j < available.get(i).size(); j++) {
+                if (available.get(i).get(j).getTutorials().size() == 0) {
+
+                    if (addCourse(available.get(i).get(j), timeTableCopy)) {
+                        Course[][] timeTableCopyB = createCopy(timeTableCopy);
+                        copy.add(available.get(i).get(j));
+                        createTimetable(available, timeTableCopyB, i+1, 0, 0, copy);
+                    } else {
+                        return;
+                    }
+                    if (copy.size() == available.size()) {
+                        if (!duplicate(timeTableCopy)) {
+                            timeTables.add(timeTableCopy);
+                        }
+                    }
+                    /*if (i == available.size() - 1) {
+                        timeTables.add(timeTableCopyB);
+                    }*/
+                } else {
+                    for (int k = startC; k < available.get(i).get(j).getTutorials().size(); k++) {
+
+                        if (addCourse(available.get(i).get(j).getTutorials().get(k), timeTableCopy)) {
+                            Course[][] timeTableCopyB = createCopy(timeTableCopy);
+                            copy.add(available.get(i).get(j).getTutorials().get(k));
+                            createTimetable(available, timeTableCopyB, i+1, 0, 0, copy);
+                        } else {
+                            return;
+                        }
+                        if (copy.size() == available.size()) {
+                            if (!duplicate(timeTableCopy)) {
+                                timeTables.add(timeTableCopy);
+                            }
+                        }
+/*
+                        if (i == available.size() - 1) {
+                            timeTables.add(timeTableCopyB);
+                        }*/
+                    }
+                }
+            }
+
         }
 
     }
-    boolean addCourse(Course course){
+
+    boolean duplicate(Course[][] timeTable) {
+        if (timeTables.size() == 0) {
+            return false;
+        }
+        for (int i = 0; i < timeTables.size(); i++) {
+            for (int j = 0; j < timeTable.length; j++) {
+                for (int k = 0; k < timeTable[j].length; k++) {
+                    if (timeTable[j][k] == null && timeTables.get(i)[j][k] == null) {
+                        return false;
+                    } else if (!timeTable[j][k].equals(timeTables.get(i)[j][k])) {
+                        return false;
+                    }
+                }
+            }
+        }
+        return true;
+    }
+
+
+    Course[][] createCopy(Course[][] original){
+        Course[][] copy = new Course[original.length][original[0].length];
+        for (int i = 0; i < original.length; i++) {
+            for (int j = 0; j < original[i].length; j++) {
+                copy[i][j] = original[i][j];
+            }
+        }
+        return copy;
+    }
+    boolean addCourse(Course course, Course[][] timeTable){
         int start, startHour, startMins, end, endHour, endMins, rowStartIndex, rowEndIndex;
         String days, time;
         String[] week = {"mon" , "tue" , "wed", "thu", "fri"};
@@ -215,20 +291,18 @@ public class Schedule extends JFrame {
         }
 
         for (int k = rowStartIndex; k < rowEndIndex; k++) {
-            if (timeFrames[cols[0]][k] == null) {
-                timeFrames[cols[0]][k] = course;
+            if (timeTable[cols[0]][k] == null) {
+                timeTable[cols[0]][k] = course;
                 if (cols[1] != -1) {
-                    if (timeFrames[cols[1]][k] == null) {
-                        timeFrames[cols[1]][k] = course;
+                    if (timeTable[cols[1]][k] == null) {
+                        timeTable[cols[1]][k] = course;
                     } else {
-                        System.out.println("Conflict with course " + timeFrames[cols[1]][k].getName() + " and " + course.getName() + "A");
+                        System.out.println("Conflict with course " + timeTable[cols[1]][k].getName() + " and " + course.getName() + "A");
                         return false;
                     }
-                } else {
-                    //added = true;
                 }
             } else {
-                System.out.println("Conflict with course " + timeFrames[cols[0]][k].getName()+" and " + course.getName() );
+                System.out.println("Conflict with course " + timeTable[cols[0]][k].getName()+" and " + course.getName() );
                 return false;
             }
 

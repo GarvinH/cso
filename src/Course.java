@@ -8,7 +8,6 @@ import java.util.ArrayList;
 
 class Course {
     private String name, type, time, days;
-    private int[] slots;
     private ArrayList<Course> tutorials;
 
     Course(String name, String type, String time, String days){
@@ -34,13 +33,6 @@ class Course {
     }
 
 
-    public int[] getSlots() {
-        return slots;
-    }
-
-    public void setSlots(int[] slots) {
-        this.slots = slots;
-    }
 
     public ArrayList<Course> getTutorials(){
         return tutorials;

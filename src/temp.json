@@ -3,7 +3,7 @@
     "name": "STII1111A",
     "stype": "lecture",
     "time": "1205-1325",
-    "days": "wed fri"
+    "days": "wed tue"
   },
   "P": {
     "name": "STII1111B",
@@ -20,17 +20,17 @@
   "C": {
     "name": "STII3333A",
     "stype": "lecture",
-    "time": "1205-1325",
-    "days": "mon fri"
+    "time": "1505-1625",
+    "days": "thu fri"
   },
   "D": {
     "name": "STII4444A",
     "stype": "lecture",
-    "time": "1205-1325",
+    "time": "0905-1025",
     "days": "mon fri"
   },
   "E": {
-    "name": "STII2222A",
+    "name": "STII2322A",
     "stype": "lecture",
     "time": "1205-1325",
     "days": "mon fri"
@@ -50,7 +50,7 @@
   "H": {
     "name": "STII2215A1",
     "stype": "tutorial",
-    "time": "1805-2055",
+    "time": "1505-1605",
     "days": "fri"
   },
   "T": {
