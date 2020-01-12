@@ -20,16 +20,16 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Schedule extends JFrame {
 
     // initialize J elements
     static JFrame window;
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         System.out.println("Schedule");
         window = new Schedule();
-
     }
 
     Schedule() {
@@ -55,26 +55,36 @@ public class Schedule extends JFrame {
         JComboBox selectedTime; // displays the time of class
         JComboBox selectedRoom; // displays the building and room of the class in the calendar tab
 
-            ViewPanel(){
+        ViewPanel() {
             selectedSubject = new JComboBox();
+            selectedNumber = new JComboBox();
+            selectedTime = new JComboBox();
+            selectedRoom = new JComboBox();
         }
     }
 
-    private class AddPanel extends JPanel implements ActionListener {
+    private class AddPanel extends JPanel {
         JComboBox courseSubject;
         JComboBox courseLevel;
-        JComboBox courseNumber;
+        JTextField courseNumber;
         JComboBox semesterOptions;
         JComboBox courseLevelOptions;
         JComboBox courseOptions;
         JTextField CRN;
         JButton addCourse;
-        JButton clearbutton;
+        JButton clearButton;
+
+        JScrollPane levelScrollPane;
+        JScrollPane subjectScrollPane;
+        JPanel schPanel;
+        JButton courseLockInButton;
+        JLabel selectionDescription;
+        JList levelList;
 
         AddPanel() {
             setLayout(null);
             // add a filein function next version to make semesters automatically updated
-            String[] semesterString = {"-","winter2020", "summer2020"};
+            String[] semesterString = {"-", "winter2020", "summer2020"};
             String[] courseLevelStrings = {"All Levels", "Undergraduate", "Graduate"};
             String[] courseString = {"All Subjects", "ACCT", "AERO", "AFRI", "ASLA", "ANTH", "ALDS", "COMP", "MATH"};
 
@@ -85,45 +95,62 @@ public class Schedule extends JFrame {
 
             // buttons
             addCourse = new JButton("Add Course");//this button adds course
-            clearbutton = new JButton("Clear");//this button clears the calendar
+            clearButton = new JButton("Clear");//this button clears the calendar
 
-            semesterOptions.addActionListener(this);
-            courseOptions.addActionListener(this);
-            addCourse.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    boolean add = true;
-                    if (semesterOptions.getSelectedItem().equals("-"));
-                        semesterOptions.setBorder(BorderFactory.createLineBorder(Color.RED));
-                        add = false;
-                }   else {
-                    semesterOptions.setBorder(BorderFactory.createEmptyBorder());
-            });
-            clearbutton.addActionListener(new ActionListener(){
-                @Override
-                public void actionPerformed(ActionEvent e) {
+            // user input
+            courseNumber = new JTextField();
+            CRN = new JTextField();
 
+            semesterOptions.setBounds(10,60,55,25);
+            // add the boxes for JTextFields
+            add(CRN);
+            CRN.setBorder(BorderFactory.createEmptyBorder());
+            CRN.setBounds(10, 285, 85, 25);
+
+            add(courseNumber);
+            courseNumber.setBorder(BorderFactory.createEmptyBorder());
+            courseNumber.setBounds(10, 220, 85, 25);
+
+            levelList = new JList(courseLevelStrings);
+            levelScrollPane = new JScrollPane();
+            levelScrollPane.setViewportView(levelList);
+            levelList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+            levelList.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mousePressed(MouseEvent e) {
+                    super.mousePressed(e);
+                    if (!levelList.isSelectionEmpty()) {
+                        levelList.clearSelection();//allows only 1 level to be selected at a given time
+                    }
                 }
             });
-            }
+            levelList.setFont(new Font("monospaced", Font.PLAIN, 12));
+            levelScrollPane.setViewportView(levelList);//setting scrollpane to display list
+            levelScrollPane.setBounds(10, 30, 600, 130);
         }
 
-    }
+        private class UIPanel extends JPanel {
 
-    JScrollPane levelScrollPane;
-    JScrollPane subjectScrollPane;
-    JPanel schPanel;
-    JButton courseLockInButton;
-    JLabel selectionDescription;
+        }
 
+        private class staticPanel extends JPanel {
 
-    private class UIPanel extends JPanel {
-        JScrollPane ioPanel;
-    }
-    private class staticPanel extends JPanel{
+        }
 
-    }
-    private class SchedulePanel extends JPanel {
+        private class SchedulePanel extends JPanel {
+
+        }
+        public void paintComponent(Graphics g) {
+            super.paintComponent(g);
+            this.setDoubleBuffered(true);
+            repaint();
+            g.setFont(new Font("Arial", Font.BOLD, 16));
+            g.drawString("Course Level:", 10 ,25 );
+            g.drawString("Subject", 10, 115);
+            g.drawString("Course Number", 10, 210);
+            g.drawString("CRN", 10, 275);
+        }
+
 
     }
 }

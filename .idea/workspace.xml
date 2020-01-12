@@ -25,6 +25,11 @@
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Grade 12/Computer Science/DSAssignment/AirportManager" />
     <property name="project.structure.last.edited" value="Project" />
@@ -62,7 +67,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="211dae96-4ba7-40f5-8f41-78e7ac8514fe" name="Default Changelist" comment="" />
+      <changelist id="624f6cf2-92c4-4fbc-a639-8d8379b1d6b1" name="Default Changelist" comment="" />
       <created>1578776213712</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -89,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578799951160</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Created arraylist for courses&#10;created JPanels for UI and the calendar">
+      <created>1578817026567</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1578817026567</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -112,26 +124,30 @@
     <option name="LAST_COMMIT_MESSAGE" value="Created arraylist for courses&#10;created JPanels for UI and the calendar" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="23" width="733" height="777" key="CommitChangelistDialog2" timestamp="1578782545439">
+    <state x="453" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1578819100380">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="0" y="23" width="733" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1578782545439" />
-    <state width="1238" height="196" key="GridCell.Tab.0.bottom" timestamp="1578802781611">
+    <state x="453" y="128" key="#com.intellij.ide.util.MemberChooser/0.23.1280.777@0.23.1280.777" timestamp="1578819100380" />
+    <state x="0" y="23" width="733" height="777" key="CommitChangelistDialog2" timestamp="1578817026133">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1238" height="196" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1578802781611" />
-    <state width="1238" height="196" key="GridCell.Tab.0.center" timestamp="1578802781611">
+    <state x="0" y="23" width="733" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1578817026133" />
+    <state width="1238" height="196" key="GridCell.Tab.0.bottom" timestamp="1578822942304">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1238" height="196" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1578802781611" />
-    <state width="1238" height="196" key="GridCell.Tab.0.left" timestamp="1578802781610">
+    <state width="1238" height="196" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1578822942304" />
+    <state width="1238" height="196" key="GridCell.Tab.0.center" timestamp="1578822942302">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1238" height="196" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1578802781610" />
-    <state width="1238" height="196" key="GridCell.Tab.0.right" timestamp="1578802781611">
+    <state width="1238" height="196" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1578822942302" />
+    <state width="1238" height="196" key="GridCell.Tab.0.left" timestamp="1578822942301">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1238" height="196" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1578802781611" />
+    <state width="1238" height="196" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1578822942301" />
+    <state width="1238" height="196" key="GridCell.Tab.0.right" timestamp="1578822942304">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1238" height="196" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1578822942304" />
     <state x="305" y="124" key="search.everywhere.popup" timestamp="1578802495040">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
