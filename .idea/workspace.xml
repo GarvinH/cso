@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="624f6cf2-92c4-4fbc-a639-8d8379b1d6b1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cso/Schedule.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cso/Schedule.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Schedule.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578782545583</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Created arraylist for courses&#10;created JPanels for UI and the calendar">
+      <created>1578799951160</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1578799951160</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -108,5 +116,25 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="0" y="23" width="733" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1578782545439" />
+    <state width="1238" height="196" key="GridCell.Tab.0.bottom" timestamp="1578802781611">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1238" height="196" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1578802781611" />
+    <state width="1238" height="196" key="GridCell.Tab.0.center" timestamp="1578802781611">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1238" height="196" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1578802781611" />
+    <state width="1238" height="196" key="GridCell.Tab.0.left" timestamp="1578802781610">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1238" height="196" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1578802781610" />
+    <state width="1238" height="196" key="GridCell.Tab.0.right" timestamp="1578802781611">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1238" height="196" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1578802781611" />
+    <state x="305" y="124" key="search.everywhere.popup" timestamp="1578802495040">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="305" y="124" key="search.everywhere.popup/0.23.1280.777@0.23.1280.777" timestamp="1578802495040" />
   </component>
 </project>
