@@ -2,6 +2,8 @@
 from selenium import webdriver
 import json
 import random
+import highLevelScrape
+print("*")
 
 options = webdriver.ChromeOptions()
 options.add_argument('--incognito')
@@ -10,7 +12,6 @@ driver = webdriver.Chrome("./chromedriver", chrome_options=options)
 
 url = "https://central.carleton.ca/prod/bwysched.p_display_course?wsea_code=EXT&term_code=202010&disp=11370009&crn=11047"
 url2 = "https://central.carleton.ca/prod/bwysched.p_display_course?wsea_code=EXT&term_code=202010&disp=11371548&crn=11012"
-# HTML = driver.page_source
 meta = {}
 
 def scrape_class_information(url):
@@ -63,5 +64,5 @@ except KeyError:
     meta[random.randint(0,100)]=data_2
 
 
-with open("data_file.json", "w") as write_file:
+with open("./data/data_file.json", "w+") as write_file:
     json.dump(meta,write_file,indent=2)
