@@ -30,6 +30,18 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import org.json.JSONObject;
+
+import jdk.nashorn.internal.ir.debug.JSONWriter;
+
+import javax.swing.*;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+
 public class Schedule extends JFrame {
 
     // initialize J elements
@@ -74,12 +86,19 @@ public class Schedule extends JFrame {
         JScrollPane levelScrollPane;
         JList levelList;
 
+        ArrayList<String> courses;
+        DefaultListModel<String> courseModel;
+
         AddPanel() {
             setLayout(null);
             // add a filein function next version to make semesters automatically updated
             String[] semesterString = { "Winter 2020", "Summer 2020" };
             String[] courseLevelStrings = { "Undergraduate", "Graduate" };
             String[] courseString = { "ACCT", "AERO", "AFRI", "ASLA", "ANTH", "ALDS", "COMP", "MATH" };
+            courses = new ArrayList<String>();
+            courseModel = new DefaultListModel<String>();
+            JSONWriter jsw = new JSONWriter();
+            JSONObject file = new JSONObject();
 
             // drop down strings
             courseLevelOptions = new JComboBox(courseLevelStrings);
@@ -94,10 +113,16 @@ public class Schedule extends JFrame {
             courseNumber = new JTextField();
             courseNumber.setDocument(new JTextFieldLimit(4));
 
-            semesterOptions.setBounds(10, 40, 120, 25);
-            courseLevelOptions.setBounds(10, 130, 120, 25);
-            courseOptions.setBounds(10, 225, 120, 25);
-            courseNumber.setBounds(10, 315, 120, 25);
+            semesterOptions.setBounds(10, 40, 120, 30);
+            courseLevelOptions.setBounds(10, 130, 120, 30);
+            courseOptions.setBounds(10, 225, 120, 30);
+            courseNumber.setBounds(10, 315, 120, 30);
+            addCourse.setBounds(10, 400, 120, 30);
+
+            JScrollPane showCourses = new JScrollPane();
+            showCourses.setBounds(10,500, 120, 200);
+            JList courseList = new JList(courseModel);
+            showCourses.setViewportView(courseList);
 
             add(courseNumber);
             courseNumber.setBorder(BorderFactory.createEmptyBorder());
@@ -119,10 +144,26 @@ public class Schedule extends JFrame {
             levelScrollPane.setViewportView(levelList);// setting scrollpane to display list
             levelScrollPane.setBounds(10, 30, 600, 130);
 
+            addCourse.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    courses.add(courseOptions.getSelectedItem().toString() + " "+courseNumber.getText());
+                    if (file.has(""))
+                    updateModels();
+                }
+            });
+
             add(courseLevelOptions);
             add(semesterOptions);
             add(courseOptions);
             add(addCourse);
+            add(showCourses);
+        }
+
+        private void updateModels() {
+            courseModel.removeAllElements();
+            for (int i = 0; i < courses.size(); i++) {
+                courseModel.addElement(courses.get(i));
+            }
         }
 
         private class UIPanel extends JPanel {
@@ -146,6 +187,7 @@ public class Schedule extends JFrame {
             g.drawString("Course Level:", 10, 115);
             g.drawString("Subject", 10, 210);
             g.drawString("Course Number", 10, 300);
+            g.drawString("Your Courses", 10, 485);
         }
 
     }
