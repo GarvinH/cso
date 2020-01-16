@@ -32,8 +32,6 @@ import java.util.Arrays;
 
 import org.json.JSONObject;
 
-import jdk.nashorn.internal.ir.debug.JSONWriter;
-
 import javax.swing.*;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -53,11 +51,20 @@ public class Schedule extends JFrame {
     }
 
     Schedule() {
-        super("CSO");
+        super("Carleton Schedule Optimizer");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(Toolkit.getDefaultToolkit().getScreenSize());
         this.setResizable(false);
-        add(new AddPanel());
+        AddPanel wind = new AddPanel();
+        add(wind);
+        Object[] semesterString = { "Winter 2020", "Summer 2020" };
+        wind.semester = (String)JOptionPane.showInputDialog(null, "Your Semester:", "Select Semester", JOptionPane.PLAIN_MESSAGE, null, semesterString, "Winter 2020");
+        if (wind.semester == "Winter 2020") {
+            wind.semester = "202010";
+        } else {
+            wind.semester = "202020";
+        }
+        wind.data.put(wind.semester, new JSONObject());
         this.setVisible(true);
     }
 
@@ -77,7 +84,7 @@ public class Schedule extends JFrame {
 
     private class AddPanel extends JPanel {
         JTextField courseNumber;
-        JComboBox semesterOptions;
+
         JComboBox courseLevelOptions;
         JComboBox courseOptions;
         JButton addCourse;
@@ -88,21 +95,19 @@ public class Schedule extends JFrame {
 
         ArrayList<String> courses;
         DefaultListModel<String> courseModel;
+        JSONObject data = new JSONObject();
+        String semester;
 
         AddPanel() {
             setLayout(null);
             // add a filein function next version to make semesters automatically updated
-            String[] semesterString = { "Winter 2020", "Summer 2020" };
             String[] courseLevelStrings = { "Undergraduate", "Graduate" };
             String[] courseString = { "ACCT", "AERO", "AFRI", "ASLA", "ANTH", "ALDS", "COMP", "MATH" };
             courses = new ArrayList<String>();
             courseModel = new DefaultListModel<String>();
-            JSONWriter jsw = new JSONWriter();
-            JSONObject file = new JSONObject();
 
             // drop down strings
             courseLevelOptions = new JComboBox(courseLevelStrings);
-            semesterOptions = new JComboBox(semesterString);
             courseOptions = new JComboBox(courseString);
 
             // buttons
@@ -113,14 +118,13 @@ public class Schedule extends JFrame {
             courseNumber = new JTextField();
             courseNumber.setDocument(new JTextFieldLimit(4));
 
-            semesterOptions.setBounds(10, 40, 120, 30);
-            courseLevelOptions.setBounds(10, 130, 120, 30);
-            courseOptions.setBounds(10, 225, 120, 30);
-            courseNumber.setBounds(10, 315, 120, 30);
-            addCourse.setBounds(10, 400, 120, 30);
+            courseLevelOptions.setBounds(10, 40, 120, 30);
+            courseOptions.setBounds(10, 130, 120, 30);
+            courseNumber.setBounds(10, 225, 120, 30);
+            addCourse.setBounds(10, 315, 120, 30);
 
             JScrollPane showCourses = new JScrollPane();
-            showCourses.setBounds(10,500, 120, 200);
+            showCourses.setBounds(10,400, 120, 200);
             JList courseList = new JList(courseModel);
             showCourses.setViewportView(courseList);
 
@@ -147,13 +151,12 @@ public class Schedule extends JFrame {
             addCourse.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     courses.add(courseOptions.getSelectedItem().toString() + " "+courseNumber.getText());
-                    if (file.has(""))
+                    //if (data.has())
                     updateModels();
                 }
             });
 
             add(courseLevelOptions);
-            add(semesterOptions);
             add(courseOptions);
             add(addCourse);
             add(showCourses);
@@ -183,11 +186,10 @@ public class Schedule extends JFrame {
             this.setDoubleBuffered(true);
             repaint();
             g.setFont(new Font("Arial", Font.BOLD, 16));
-            g.drawString("Semester:", 10, 25);
-            g.drawString("Course Level:", 10, 115);
-            g.drawString("Subject", 10, 210);
-            g.drawString("Course Number", 10, 300);
-            g.drawString("Your Courses", 10, 485);
+            g.drawString("Course Level:", 10, 25);
+            g.drawString("Subject", 10, 115);
+            g.drawString("Course Number", 10, 210);
+            g.drawString("Your Courses", 10, 300);
         }
 
     }
