@@ -8,5 +8,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="com.google.code.gson:gson:2.8.6" level="project" />
+    <orderEntry type="library" exported="" name="org.graalvm:polyglot-tck:1.0.0-rc7" level="project" />
   </component>
 </module>

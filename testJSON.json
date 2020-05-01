@@ -1,0 +1,19 @@
+{
+    "202020": {
+        "C1": {
+            "level": "UG",
+            "subject": "COMP",
+            "number": "1005"
+            },
+        "C2": {
+            "level": "UG",
+            "subject": "MATH",
+            "number": "1004"
+        },
+        "C3": {
+            "level": "UG",
+            "subject": "ECON",
+            "number":"1001"
+        }
+    }
+}
